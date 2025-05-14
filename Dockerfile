@@ -7,4 +7,5 @@ RUN strip --strip-section-headers /tiny
 
 FROM scratch
 COPY --chown=0:0 --from=builder /tiny /x
+VOLUME [ "/app" ]
 ENTRYPOINT ["/x"]
